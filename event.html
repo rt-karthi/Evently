@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+    
+     <!--mdboostrap links-->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css" rel="stylesheet"/>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.js"></script>
+
+     <link rel="stylesheet" href="css/style2.css">
+     <style>
+      ul li:hover ul.dropdown-menu{
+        font-size:1.2rem;
+        display: block;
+        background: hsl(206, 6%, 78%);
+        color: white;
+  }
+     </style>
+  
+ 
+</head>
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarCenteredExample" aria-controls="navbarCenteredExample" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+  
+          <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample" style="font-family: poppins; font-size: 1.3rem;">
+           
+            <ul class="navbar-nav mb-2 mb-lg-0 ">
+              <li class="nav-item ">
+                <a class="nav-link active px-lg-4" aria-current="page" href="index.html">Home</a>
+              </li>
+             
+              
+              <li class="nav-item dropdown">
+                <a  class="nav-link dropdown-toggle px-lg-4 active" href="techxtra_details.html" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                  Techxtra
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="pptregister.php">Paper Presentation</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="coderegister.php">Alhomora</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="quizregister.php">Mind Fizz</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="webregister.php">Web Crawler</a>
+                  </li>
+                </ul>
+              </li>
+
+               
+               <li class="nav-item dropdown">
+                <a  class="nav-link dropdown-toggle px-lg-4 active" href="dhamaka_details.html" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                  Dhamaka
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="musiqueregister.php">Musique</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="charadesregister.php">Dumb Charades</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="couplingregister.php">Word Coupling</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="adsregister.php">Ad-Craze</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active px-lg-4" href="contactus.html">contact us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a  class="nav-link dropdown-toggle px-lg-4 active" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                  Event details
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="techxtra_details.html">Technical</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="dhamaka_details.html">Non-Technical</a>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>           
+          </div>          
+        </div>        
+      </nav>
+
+
+
+
+      <div class="main">
+        <br><br>
+        <h1 style="font-family: Anton; font-size: 4rem; letter-spacing: 4px;">TECHNICAL EVENTS</h1>
+        <ul class="cards">
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="image/paper.png"></div>
+              <div class="card_content">
+                <h2 class="card_title">Paper Presentation</h2>
+                <p class="card_text"></p>
+                <a href="pptregister.php">
+                  <button class="btn card_btn">Register</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="image/webdesign.jpg"></div>
+              <div class="card_content">
+                <h2 class="card_title">Web Crawler</h2>
+                <p class="card_text"></p>
+                <a href="webregister.php"
+                  <button class="btn card_btn">Register</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="image/quiz2.jpg" height="150px"></div>
+              <div class="card_content">
+                <h2 class="card_title">Mind Fizz</h2>
+                <p class="card_text"></p>
+                <a href="quizregister.php"
+                  <button class="btn card_btn">Register</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="image/codeb.jpg"></div>
+              <div class="card_content">
+                <h2 class="card_title">Code blaster</h2>
+                <p class="card_text"></p>
+                <a href="coderegister.php"
+                  <button class="btn card_btn">Register</button>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+
+        <br><br>
+        <h1 style="font-family: Anton; font-size: 4rem; letter-spacing: 4px;">DHAMAKA EVENTS</h1>
+        <ul class="cards">
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="image/music.jpg"></div>
+              <div class="card_content">
+                <h2 class="card_title">Musique</h2>
+                <p class="card_text"></p>
+                <a href="musiqueregister.php"
+                  <button class="btn card_btn">Register</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="image/dumbcharades.png"></div>
+              <div class="card_content">
+                <h2 class="card_title">Dumb Charades</h2>
+                <p class="card_text"></p>
+                <a href="charadesregister.php"
+                  <button class="btn card_btn">Register</button>
+                </a>
+              </div>
+            </div>
+          </li>
+
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="image/puzzle.jpg"></div>
+              <div class="card_content">
+                <h2 class="card_title">Word Coupling</h2>
+                <p class="card_text"></p>
+                <a href="couplingregister.php"
+                  <button class="btn card_btn">Register</button>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="cards_item">
+            <div class="card">
+              <div class="card_image"><img src="image/adcraze.jpg"></div>
+              <div class="card_content">
+                <h2 class="card_title">Ad-Craze</h2>
+                <p class="card_text"></p>
+                <a href="adsregister.php"
+                  <button class="btn card_btn">Register</button>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <hr class="hr" />
+      <div class="d-flex justify-content-center">
+        <p>
+            &copy; Copyright&nbsp;&nbsp;<script>document.write(new Date().getFullYear());</script> All rights reserved | karthi_rt
+        </p>
+     </div>
+
+    
+</body>
+</html>

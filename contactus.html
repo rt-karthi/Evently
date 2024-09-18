@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+    <!--feedback-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Quicksand&amp;display=swap"
+    />
+
+    <link rel="stylesheet" href="css/style4.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"
+    ></script>
+
+    <style>
+      #feedback-form-wrapper #floating-icon > button {
+        position: fixed;
+        right: 0;
+        top: 50%;
+        transform: rotate(-90deg) translate(50%, -50%);
+        transform-origin: right;
+      }
+
+      #feedback-form-wrapper .rating-input-wrapper input[type="radio"] {
+        display: none;
+      }
+      #feedback-form-wrapper .rating-input-wrapper input[type="radio"] ~ span {
+        cursor: pointer;
+      }
+      #feedback-form-wrapper
+        .rating-input-wrapper
+        input[type="radio"]:checked
+        ~ span {
+        background-color: #4261dc;
+        color: #fff;
+      }
+      #feedback-form-wrapper .rating-labels > label {
+        font-size: 14px;
+        color: #777;
+      }
+      ul li:hover ul.dropdown-menu {
+        font-size: 1.2rem;
+        display: block;
+        background: hsl(206, 6%, 78%);
+        color: white;
+      }
+      ul li:hover ul.dropdown-menu {
+        font-size: 1.2rem;
+        display: block;
+        background: hsl(206, 6%, 78%);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+
+    <script>
+      function validateform(){  
+      var rno=document.myform.rno.value;  
+      if(rno.length<3){  
+        alert("roll number must be at least 3 numbers");  
+        return false;  
+      }  
+      }
+    </script>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-mdb-toggle="collapse"
+          data-mdb-target="#navbarCenteredExample"
+          aria-controls="navbarCenteredExample"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarCenteredExample"
+          style="font-family: poppins; font-size: larger"
+        >
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active px-lg-4"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle px-lg-4 active"
+                href="event.html"
+                id="navbarDropdown"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Techxtra
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="pptregister.php"
+                    >Paper Presentation</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="coderegister.php">Alhomora</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="quizregister.php">Mind Fizz</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="webregister.php"
+                    >Web Crawler</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle px-lg-4 active"
+                href="event.html"
+                id="navbarDropdown"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dhamaka
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="musiqueregister.php"
+                    >Musique</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="charadesregister.php"
+                    >Dumb Charades</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="couplingregister.php"
+                    >Word Coupling</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="adsregister.php">Ad-Craze</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active px-lg-4" href="contactus.html"
+                >contact us</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle px-lg-4 active"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Event details
+              </a>
+
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="techxtra_details.html"
+                    >Technical</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="dhamaka_details.html"
+                    >Non-Technical</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container d-flex justify-content-center align-items-center">
+      <img
+        src="image/contact.jpg"
+        alt=""
+        height="500"
+        width="700"
+        style="margin-left: -20px"
+      />
+
+      <form name="myform" method="post" action="contus.php" onsubmit="return validateform()">
+        <h1 class="title text-center mb-4">Talk to Us</h1>
+
+        <div class="form-group position-relative">
+          <label for="formName" class="d-block">
+            <i class="icon" data-feather="user"></i>
+          </label>
+          <input
+            type="text"
+            name="name"
+            id="formName"
+            class="form-control form-control-lg thick"
+            placeholder="Name"
+          />
+        </div>
+
+        <div class="form-group position-relative">
+          <label for="formEmail" class="d-block">
+            <i class="icon" data-feather="hash"></i>
+          </label>
+          <input
+            type="text"
+            name="rno"
+            id="formEmail"
+            class="form-control form-control-lg thick"
+            placeholder="Roll Number"
+          />
+        </div>
+
+        <div class="form-group message">
+          <textarea
+            name="query"
+            id="formMessage"
+            class="form-control form-control-lg"
+            rows="7"
+            placeholder="Queries"
+          ></textarea>
+        </div>
+
+        <div class="text-center">
+          <button
+            type="submit"
+            value="submit"
+            name="submit"
+            class="btn btn-primary"
+            tabindex="-1"
+          >
+            Send message
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!--feedback-->
+    <div id="feedback-form-wrapper">
+      <div id="floating-icon">
+        <button
+          style="font-size: 1rem"
+          type="button"
+          class="btn btn-primary btn-sm rounded-0"
+          data-toggle="modal"
+          data-target="#exampleModal"
+        >
+          Feedback
+        </button>
+      </div>
+      <div id="feedback-form-modal">
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Feedback Form
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form method="post" action="feedb.php">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1"
+                      >How would you like this event?</label
+                    >
+                    <div
+                      class="rating-input-wrapper d-flex justify-content-between mt-2"
+                    >
+                      <label
+                        ><input type="radio" value="1" name="rating" /><span
+                          class="border rounded px-3 py-2"
+                          >1</span
+                        ></label
+                      >
+                      <label
+                        ><input type="radio" value="2" name="rating" /><span
+                          class="border rounded px-3 py-2"
+                          >2</span
+                        ></label
+                      >
+                      <label
+                        ><input type="radio" value="3" name="rating" /><span
+                          class="border rounded px-3 py-2"
+                          >3</span
+                        ></label
+                      >
+                      <label
+                        ><input type="radio" value="4" name="rating" /><span
+                          class="border rounded px-3 py-2"
+                          >4</span
+                        ></label
+                      >
+                      <label
+                        ><input type="radio" value="5" name="rating" /><span
+                          class="border rounded px-3 py-2"
+                          >5</span
+                        ></label
+                      >
+                      <label
+                        ><input type="radio" value="6" name="rating" /><span
+                          class="border rounded px-3 py-2"
+                          >6</span
+                        ></label
+                      >
+                      <label
+                        ><input type="radio" value="7" name="rating" /><span
+                          class="border rounded px-3 py-2"
+                          >7</span
+                        ></label
+                      >
+                      <label
+                        ><input type="radio" value="8" name="rating" /><span
+                          class="border rounded px-3 py-2"
+                          >8</span
+                        ></label
+                      >
+                      <label
+                        ><input type="radio" value="9" name="rating" /><span
+                          class="border rounded px-3 py-2"
+                          >9</span
+                        ></label
+                      >
+                      <label
+                        ><input type="radio" value="10" name="rating" /><span
+                          class="border rounded px-3 py-2"
+                          >10</span
+                        ></label
+                      >
+                    </div>
+                    <div
+                      class="rating-labels d-flex justify-content-between mt-1"
+                    >
+                      <label>Very unlikely</label>
+                      <label>Very likely</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="input-two"
+                      >Would you like to say something?</label
+                    >
+                    <textarea
+                      name="message"
+                      class="form-control"
+                      id="input-two"
+                      rows="5"
+                    ></textarea>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button
+                      type="submit"
+                      name="submit"
+                      value="submit"
+                      class="btn btn-primary"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <hr class="hr" />
+    <div class="d-flex justify-content-center">
+      <p>
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        All rights reserved | karthi_rt
+      </p>
+    </div>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      "use strict";
+      feather.replace();
+    </script>
+    <!--feedback-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

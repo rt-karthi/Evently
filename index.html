@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Event Registration</title>
+
+    <link rel="stylesheet" href="css/style.css">
+     <!--feedback-->
+     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap"rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+    
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>   
+
+    <style>
+      #feedback-form-wrapper #floating-icon > button {
+         position: fixed;
+         right: 0;
+         top: 50%;
+         transform: rotate(-90deg) translate(50%, -50%);
+         transform-origin: right;
+     }
+ 
+     #feedback-form-wrapper .rating-input-wrapper input[type="radio"] {
+     display: none;
+     }
+     #feedback-form-wrapper .rating-input-wrapper input[type="radio"] ~ span {
+     cursor: pointer;
+     }
+     #feedback-form-wrapper .rating-input-wrapper input[type="radio"]:checked ~ span {
+     background-color: #4261dc;
+     color: #fff;
+     }
+     #feedback-form-wrapper .rating-labels > label{
+     font-size: 14px;
+         color: #777;
+     }
+
+     .btn.btn-primary {
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding: 0 3rem;
+    border: 0;
+    border-radius: 3rem;
+    background-image: linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #ff923c);
+    background-size: 300% 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .btn.btn-primary:hover:enabled {
+    box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
+    background-size: 100% 100%;
+    transform: translateY(-0.15em);
+  }
+
+  ul li:hover ul.dropdown-menu{
+        font-size:1.2rem;
+        display: block;
+        background: hsl(206, 6%, 78%);
+        color: white;
+  }
+   </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarCenteredExample" aria-controls="navbarCenteredExample" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+
+    <!-- <a class="navbar-brand me-2" href="https://mdbgo.com/">
+        <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="16" alt="MDB Logo" loading="lazy" style="margin-top: -1px;"/>
+    </a>
+       -->
+          
+          <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample" style="font-family: poppins; font-size: 1.3rem;">
+           
+            <ul class="navbar-nav mb-2 mb-lg-0 ">
+              <li class="nav-item ">
+                <a class="nav-link active px-lg-4" aria-current="page" href="index.html">Home</a>
+              </li>
+                           
+              <li class="nav-item dropdown">
+                <a  class="nav-link dropdown-toggle px-lg-4 active" href="#" id="navbarDropdown"  data-mdb-toggle="dropdown" aria-expanded="false">
+                  Techxtra
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="pptregister.php">Paper Presentation</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="coderegister.php">Alhomora</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="quizregister.php">Mind Fizz</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="webregister.php">Web Crawler</a>
+                  </li>
+                </ul>
+              </li>
+
+               
+               <li class="nav-item dropdown">
+                <a  class="nav-link dropdown-toggle px-lg-4 active" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                  Dhamaka
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="musiqueregister.php">Musique</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="charadesregister.php">Dumb Charades</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="couplingregister.php">Word Coupling</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="adsregister.php">Ad-Craze</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active px-lg-4" href="contactus.html">contact us</a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a  class="nav-link dropdown-toggle px-lg-4 active" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                  Event details
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="techxtra_details.html">Technical</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="dhamaka_details.html">Non-Technical</a>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>           
+          </div>          
+        </div>        
+      </nav>
+
+
+      <!-- background:linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);  -->
+    <div class="container-fluid" style="height: 110vh; width: 100%; background-image: url(image/solid3.jpg);                                
+                                         font-family: Monoton; text-transform: uppercase; background-size: cover;">
+
+        <h1>&nbsp;</h1>
+        <h1 class="display-1 text-center " style="font-size: 100px; color: rgb(255, 255, 255); font-weight: 500;">Techxtra</h1>
+        <h1  class="display-3 text-center" style="font-size: 112px; color: rgb(255, 255, 255); font-weight: 550; line-height: 0.7;">&</h1>
+        <h1 class="display-1  text-center" style="font-size: 100px; color: rgb(255, 255, 255); font-weight: 500;">Dhamaka'22</h1>
+
+        <h4>&nbsp;</h4>
+
+        <h4 class="display-4  text-center" style="font-size: 40px; font-weight: 400; color: #FF4533; font-family: Anton;">18 & 19 Oct,2022</h1>
+            <h1>&nbsp;</h1>
+            <h2>&nbsp;</h2>
+            
+        <div class="text-center">
+           <a href="event.html"> <button type="button" class="btn" style="background: #FF4533; font-family: Anton;
+                padding: 14px 35px; border: 1px solid transparent;  text-align: center; color: #fff; transition: 0.3s;
+                cursor: pointer; letter-spacing: 2px; text-transform: capitalize; font-size: 20px; font-weight: 500;"
+                 data-mdb-ripple-color="dark">Register here</button>
+                </a>
+        </div>  
+
+    </div>
+
+
+    <div class="container-fluid" style="height: 320vh; width: 100%; position: relative; background-color: rgb(0, 0, 0);">
+        <h1>&nbsp;</h1>
+        <h3 class="text-center display-3 text-white" style="font-family: Anton; font-weight: 400;">Technical &amp; Non-Technical</h3>
+        <h3 class="text-center display-3 text-white" style="font-family: Anton; font-weight: 400;">Program Details</h3>
+
+          <div class="d-flex justify-content-center">
+
+            <div class="wrapper">
+              <div class="timeline">
+                <dl class="timeline--entry">
+                  <dt class="timeline--entrytitle">Paper Presentation</dt>
+                  <dd class="timeline--entrydetail">12 Feb 2020</dd>
+                </dl>
+                <dl class="timeline--entry">
+                  <dt class="timeline--entrytitle">Code Blaster</dt>
+                  <dd class="timeline--entrydetail"> 12 Feb 2020</dd>
+                </dl>
+                <dl class="timeline--entry">
+                  <dt class="timeline--entrytitle">Mind Fizz</dt>
+                  <dd class="timeline--entrydetail">12 Feb 2020</dd>
+                </dl>
+                <dl class="timeline--entry">
+                  <dt class="timeline--entrytitle">Web Crawler</dt>
+                  <dd class="timeline--entrydetail">12 Feb 2020</dd>
+                </dl>
+                <dl class="timeline--entry">
+                  <dt class="timeline--entrytitle">Musique</dt>
+                  <dd class="timeline--entrydetail">13 Feb 2020</dd>
+                </dl>
+                <dl class="timeline--entry">
+                  <dt class="timeline--entrytitle">Dumb Charades</dt>
+                  <dd class="timeline--entrydetail">13 Feb 2020</dd>
+                </dl>
+                <dl class="timeline--entry">
+                  <dt class="timeline--entrytitle">Word Coupling</dt>
+                  <dd class="timeline--entrydetail">13 Feb 2020</dd>
+                </dl>
+                <dl class="timeline--entry">
+                  <dt class="timeline--entrytitle">Ad-Craze</dt>
+                  <dd class="timeline--entrydetail">13 Feb 2020</dd>
+                </dl>
+                
+              </div>
+            </div>
+          </div>   
+    </div>
+
+    <!--feedback-->
+    <div id="feedback-form-wrapper">
+      <div id="floating-icon">
+        <button style="font-size: 1rem;" type="button" class="btn btn-primary btn-sm rounded-0" data-toggle="modal" data-target="#exampleModal">
+          Feedback
+        </button>
+    
+      </div>
+      <div id="feedback-form-modal">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Feedback Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form method="post" action="feedb.php">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">How would you like this event?</label>
+                    <div class="rating-input-wrapper d-flex justify-content-between mt-2">
+                      <label><input type="radio" value="1" name="rating" /><span class="border rounded px-3 py-2">1</span></label>
+                      <label><input type="radio" value="2" name="rating" /><span class="border rounded px-3 py-2">2</span></label>
+                      <label><input type="radio" value="3" name="rating" /><span class="border rounded px-3 py-2">3</span></label>
+                      <label><input type="radio" value="4" name="rating" /><span class="border rounded px-3 py-2">4</span></label>
+                      <label><input type="radio" value="5" name="rating" /><span class="border rounded px-3 py-2">5</span></label>
+                      <label><input type="radio" value="6" name="rating" /><span class="border rounded px-3 py-2">6</span></label>
+                      <label><input type="radio" value="7" name="rating" /><span class="border rounded px-3 py-2">7</span></label>
+                      <label><input type="radio" value="8" name="rating" /><span class="border rounded px-3 py-2">8</span></label>
+                      <label><input type="radio" value="9" name="rating" /><span class="border rounded px-3 py-2">9</span></label>
+                      <label><input type="radio" value="10" name="rating" /><span class="border rounded px-3 py-2">10</span></label>
+                    </div>
+                    <div class="rating-labels d-flex justify-content-between mt-1">
+                      <label>Very unlikely</label>
+                      <label>Very likely</label>
+                    </div>
+                  </div>
+                
+                  <div class="form-group">
+                    <label for="input-two">Would you like to say something?</label>
+                    <textarea name="message" class="form-control" id="input-two" rows="5"></textarea>
+                  </div>
+                
+                  </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                       <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    <!--end-->
+
+
+
+    <div class="container-fluid" style="height: 70vh; width: 100%; background-size: cover; background-color: rgb(0, 0, 0);">
+      <div class="d-flex justify-content-center">       
+        <h2 style="font-family: Anton; position: relative; margin-top: 50px;">Conducted by</h2>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <img src="image/stybitz.png" style="margin-top: 50px; margin-bottom: 50px;" alt="" width="300px" height="150px">
+      </div>
+      
+      <hr class="hr" />
+      <div class="d-flex justify-content-center">
+        <p>
+          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | karthi_rt
+        </p>
+     </div>
+
+    </div>
+
+    <!--feedback-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js'></script>
+</body>
+</html>

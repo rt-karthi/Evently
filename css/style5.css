@@ -1,0 +1,10 @@
+
+  
+  #feedback-form-wrapper .rating-input-wrapper input[type="radio"]:checked ~ span {
+    background-color: #4261dc;
+    color: #fff;
+  }
+  #feedback-form-wrapper .rating-labels > label{
+    font-size: 14px;
+      color: #777;
+  }

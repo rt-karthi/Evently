@@ -1,0 +1,16 @@
+{
+    "recommendations": [
+        "humao.rest-client",
+        "visualstudioexptteam.vscodeintellicode",
+        "mtxr.sqltools",
+        "ms-vscode-remote.remote-ssh",
+        "pnp.polacode",
+        "formulahendry.code-runner",
+        "rodrigovallades.es7-react-js-snippets",
+        "dsznajder.es7-react-js-snippets",
+        "johnpapa.vscode-peacock",
+        "wix.vscode-import-cost",
+        "yzhang.markdown-all-in-one",
+        "xabikos.reactsnippets"
+    ]
+}

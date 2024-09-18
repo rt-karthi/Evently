@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ppt info</title>
+      <!--feedback-->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+    <!--anime text-->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"rel="stylesheet" />
+      
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>  
+
+<style>
+        #feedback-form-wrapper #floating-icon > button {
+           position: fixed;
+           right: 0;
+           top: 50%;
+           transform: rotate(-90deg) translate(50%, -50%);
+           transform-origin: right;
+       }
+   
+       #feedback-form-wrapper .rating-input-wrapper input[type="radio"] {
+       display: none;
+       }
+       #feedback-form-wrapper .rating-input-wrapper input[type="radio"] ~ span {
+       cursor: pointer;
+       }
+       #feedback-form-wrapper .rating-input-wrapper input[type="radio"]:checked ~ span {
+       background-color: #4261dc;
+       color: #fff;
+       }
+       #feedback-form-wrapper .rating-labels > label{
+       font-size: 14px;
+           color: #777;
+       }
+  
+       .btn.btn-primary {
+      font-family: "Quicksand", sans-serif;
+      font-weight: bold;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      padding: 0 3rem;
+      border: 0;
+      border-radius: 3rem;
+      background-image: linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #ff923c);
+      background-size: 300% 100%;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .btn.btn-primary:hover:enabled {
+      box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
+      background-size: 100% 100%;
+      transform: translateY(-0.15em);
+    }
+
+    /*event details*/
+    html,
+.root {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+}
+
+body {
+  font: menu;
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 0;
+  margin: 0;
+}
+section {
+  padding-top: 4rem;
+  width: 50%;
+  margin: auto;
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+details[open] summary ~ * {
+  animation: open 0.3s ease-in-out;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary {
+  width: 100%;
+  padding: 0.5rem 0;
+  border-top: 1px solid black;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 300;
+  list-style: none;
+}
+
+details summary:after {
+  content: "+";
+  color: black;
+  position: absolute;
+  font-size: 1.75rem;
+  line-height: 0;
+  margin-top: 0.75rem;
+  right: 0;
+  font-weight: 200;
+  transform-origin: center;
+  transition: 200ms linear;
+}
+details[open] summary:after {
+  transform: rotate(45deg);
+  font-size: 2rem;
+}
+details summary {
+  outline: 0;
+}
+details p {
+  font-size: 0.95rem;
+  margin: 0 0 1rem;
+  padding-top: 1rem;
+}
+
+/*animated text*/
+.animate-text
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  text-align:center;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 50px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+ul li:hover ul.dropdown-menu{
+        font-size:1.2rem;
+        display: block;
+        background: hsl(206, 6%, 78%);
+        color: white;
+  }
+</style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarCenteredExample" aria-controls="navbarCenteredExample" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+          </button>
+          
+          <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample" style="font-family: poppins; font-size: 1.3rem;">
+           
+            <ul class="navbar-nav mb-2 mb-lg-0 ">
+              <li class="nav-item ">
+                <a class="nav-link active px-lg-4" aria-current="page" href="index.html">Home</a>
+              </li>
+                           
+              <li class="nav-item dropdown">
+                <a  class="nav-link dropdown-toggle px-lg-4 active" href="techxtra_details.html" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                  Techxtra
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="pptregister.php">Paper Presentation</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="coderegister.php">Alhomora</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="quizregister.php">Mind Fizz</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="webregister.php">Web Crawler</a>
+                  </li>
+                </ul>
+              </li>
+
+               
+               <li class="nav-item dropdown">
+                <a  class="nav-link dropdown-toggle px-lg-4 active" href="dhamaka_details.html" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                  Dhamaka
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="musiqueregister.php">Musique</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="charadesregister.php">Dumb Charades</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="couplingregister.php">Word Coupling</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="adsregister.php">Ad-Craze</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active px-lg-4" href="contactus.html">contact us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a  class="nav-link dropdown-toggle px-lg-4 active" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+                  Event details
+                </a>
+              
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="techxtra_details.html">Technical</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="dhamaka_details.html">Non-Technical</a>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>           
+          </div>          
+        </div>        
+      </nav>
+
+
+      <div class="tcenter text-center">
+        <h3 class="animate-text " style="margin-top: 20px; text-align:center;">Dhamaka Events</h3>
+      </div>
+      <section>
+        
+        <details>
+          <summary style="font-size: 1.5rem; font-weight: 500;">Musique</summary>
+          <p>Venue: PAULRAJ KUMAR HALL</p>
+            <h6> Timing:</h6>
+            Shift - 1 : 09:00 A.M - 10:00 A.M
+            Shift - 2 : 02:30 P.M - 03:30 P.M
+            <h6>&nbsp;</h6>
+         <h6>Rules:</h6> 
+         <li>There should be only one team from a class.</li>  
+         <li>A team should have two members.</li>  
+         <li>There will be a tie-breaker in case of same points.</li> 
+         <li> Only 20 seconds for each question.</li> 
+          </p>
+        </details>
+
+        <details>
+          <summary style="font-size: 1.5rem; font-weight: 500;">Dumb Charades</summary>
+          <p>Venue: ROOM NO: 86</p>
+          <h6>Timing:</h6>
+          Shift - 1 : 10:00 A.M - 11:00 A.M
+          Shift - 2 : 02:30 P.M - 03:30 P.M
+          <h6>&nbsp;</h6>
+            <h6>Rules:</h6>
+        <li> There should be only one team from a class.</li>  
+        <li> A team should have two members.</li>  
+        <li> There will be a tie-breaker in case of same points.</li> 
+        </p>
+        </details>
+
+        <details>
+          <summary style="font-size: 1.5rem; font-weight: 500;">Word Coupling</summary>
+          <p>Venue: PAULRAJ KUMAR HALL</p>
+          <h6>Timing:</h6>
+          <li>Shift - 1 : 10:00 A.M - 11: 00A.M</li>
+          <li>Shift - 2 : 04:00 P.M - 05.00 P.M</li>
+          <h6>&nbsp;</h6>
+          <h6> Rules:</h6>
+        <li> There should be only one team from a class.</li>  
+        <li> A team should have two members.</li>  
+        <li> There will be a tie-breaker in case of same points.</li> 
+        <li> There will be 3 Rounds.</li> 
+
+        </p>
+        </details>
+
+        <details>
+          <summary style="font-size: 1.5rem; font-weight: 500;">Ad-Craze</summary>
+          <p>Venue: ROOM NO: 86</p>
+          <h6>Timing:</h6> 
+          Shift - 1 : 11:30 A.M - 12.30 P.M
+          Shift - 2 : 04:00 P.M - 05.00 P.M
+          <h6>&nbsp;</h6>
+          <h6>Rules:</h6> 
+        <li> There should be only one team from a class.</li>  
+        <li> Each team will have 5 members.</li>  
+        <li> 5 minutes will be allotted for each team.</li> 
+        <li> Topic will be given before 5 minutes.</li> 
+
+        </p>
+        </details>
+
+        <details>
+          <summary style="font-size: 1.5rem; font-weight: 500;">CodeX</summary>
+          <p>Venue: BCA LAB</p>
+            <h6> Timing:</h6>
+            10:00 A.M - 02:00 A.M
+            <h6>&nbsp;</h6>
+         <h6>Rules:</h6> 
+         <li>A team should have one members.</li>  
+         <li>30 minutes for each round.</li>  
+         <li>contestant cannot discuss their problem with others.</li> 
+          </p>
+        </details>
+      </section>
+
+
+      <!--feedback-->
+    <div id="feedback-form-wrapper">
+        <div id="floating-icon">
+          <button style="font-size: 1.2rem" type="button" class="btn btn-primary btn-sm rounded-0" data-toggle="modal" data-target="#exampleModal">
+            Feedback
+          </button>
+      
+        </div>
+        <div id="feedback-form-modal">
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Feedback Form</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">How would you like this event?</label>
+                      <div class="rating-input-wrapper d-flex justify-content-between mt-2">
+                        <label><input type="radio" name="rating" /><span class="border rounded px-3 py-2">1</span></label>
+                        <label><input type="radio" name="rating" /><span class="border rounded px-3 py-2">2</span></label>
+                        <label><input type="radio" name="rating" /><span class="border rounded px-3 py-2">3</span></label>
+                        <label><input type="radio" name="rating" /><span class="border rounded px-3 py-2">4</span></label>
+                        <label><input type="radio" name="rating" /><span class="border rounded px-3 py-2">5</span></label>
+                        <label><input type="radio" name="rating" /><span class="border rounded px-3 py-2">6</span></label>
+                        <label><input type="radio" name="rating" /><span class="border rounded px-3 py-2">7</span></label>
+                        <label><input type="radio" name="rating" /><span class="border rounded px-3 py-2">8</span></label>
+                        <label><input type="radio" name="rating" /><span class="border rounded px-3 py-2">9</span></label>
+                        <label><input type="radio" name="rating" /><span class="border rounded px-3 py-2">10</span></label>
+                      </div>
+                      <div class="rating-labels d-flex justify-content-between mt-1">
+                        <label>Very unlikely</label>
+                        <label>Very likely</label>
+                      </div>
+                    </div>
+                  
+                    <div class="form-group">
+                      <label for="input-two">Would you like to say something?</label>
+                      <textarea class="form-control" id="input-two" rows="3"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br><br><br><br>
+      <hr class="hr" />
+      <div class="d-flex justify-content-center">
+        <p>
+            &copy; Copyright&nbsp;&nbsp;<script>document.write(new Date().getFullYear());</script> All rights reserved | karthi_rt
+        </p>
+     </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js'></script>
+      <!--end-->
+
+       <!--feedback-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js'></script>
+    
+</body>
+</html>
